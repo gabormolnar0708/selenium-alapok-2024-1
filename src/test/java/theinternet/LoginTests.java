@@ -24,8 +24,9 @@ public class LoginTests {
 
     @BeforeEach
     void beginWebTest() {
-        //this.chromeOptions.addArguments("--disable-search-engine-choice-screen");
-        this.driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--disable-search-engine-choice-screen");
+        this.driver = new ChromeDriver(chromeOptions);
     }
 
     @AfterEach
